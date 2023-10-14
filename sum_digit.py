@@ -1,26 +1,16 @@
 import functools
 
 
-def sum_digits(num): # O(n) Time, O(n) Space
+def sum_digits(num):# O(N) time, O(N) space
     # fill in
-    if num  < 10:
+    if num < 10:
         return num
-    num_list = [int(i)  for i in  str(num)]
     
+    num_list = [ int(i) for i in str(num)]
     total = sum(num_list)
+    
     result = sum_digits(total)
     return result
-
-
-
-
-
-
-
-
-
-
-
 
 
 

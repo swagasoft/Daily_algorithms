@@ -1,22 +1,28 @@
-def lonely_number(numbers):# time O(n) time, O(n) Space
+def lonely_number(numbers):# O|(n) time, O(n) space
     # fill in
-    lonely_number = None
+    lonely_num = None
     store_frq = {}
     
-    
     for num in numbers:
-        if(store_frq.get(num) != None):
-            store_frq[num] += 1
+        if store_frq.get(num) == None:
+            store_frq[num] =  1
         else:
-            store_frq[num] = 1
+            store_frq[num] += 1
             
-    for key in store_frq:
-        element = store_frq[key]
-        if(element == 1):
-            lonely_number = key
-            
+        for key in store_frq:
+            element =  store_frq[key]
+            if (element == 1):
+                lonely_num = key
     
-    return lonely_number
+    return lonely_num
+
+
+
+
+
+
+
+
 
 
 
